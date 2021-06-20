@@ -8,10 +8,17 @@
     <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
-    <div id="vue-app"></div>
+    <div id="vue-app">
+        <p>{{ title }}</p>
+    </div>
     <script>
         const app = Vue.createApp({
-            template: "<div>hi</div>",
+            data() {
+                return {
+                    title: "Vue3 Tutorial",
+                };
+            },
+            
         });
         app.mount("#vue-app");
     </script>
