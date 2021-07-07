@@ -1,21 +1,23 @@
 <template>
-  <h1>Dc Heros</h1>
-  <ul>
-    <li v-for="(hero, index) in dcHeros" v-bind:key="index">{{ index }} : {{ hero.name }}</li>
-
-
-    
+    <h1>Dc Heros</h1>   
+    <ul>
+      <li v-for="(hero, index) in dcHeros" :key="index">
+        {{ index }} : {{ hero.name }}
+      </li>
   </ul>
-  <input v-bind:value='newHero' type="">
-  <button>Add Hero</button>
+  <!--<input v-model.lazy='newHero' type="">-->
+  <form>
+  <input v-model="newHero" />
+  <button type="submit">Add Hero</button>
+  </form>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      isActive: false,
-      newHero: 'Superman',
+      
+      newHero: 'Hakao',
       dcHeros: [ 
         { name: 'SuperGirl' },
         { name: 'Flash' },

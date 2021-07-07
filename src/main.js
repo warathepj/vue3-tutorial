@@ -8,4 +8,5 @@ const data = function data() {
         name: "Jiant",
     };
 };
-Vue.createApp({ data, template }).mount("#vue-app");
+const App = { data, template };
+Vue.createApp(App).mount("#vue-app");
