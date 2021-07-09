@@ -16,9 +16,13 @@
 export default {
   methods: {
     addHero() {
-      alert("asdf");
+      if (this.newHero !== "") {
+        this.dcHeros.push({ name: this.newHero }); 
+        this.newHero = "";
+      }
     },
   },
+
   data() {
     return {
       newHero: "",
