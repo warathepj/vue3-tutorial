@@ -1,5 +1,5 @@
 <template>
-  <h1>Dc Heros</h1>
+  <h1>Dc Heros {{ herosCount }}</h1>
   <ul>
     <li v-for="(hero, index) in dcHeros" :key="index">
       {{ index }} : {{ hero.name }}
@@ -17,7 +17,7 @@ export default {
   methods: {
     addHero() {
       if (this.newHero !== "") {
-        this.dcHeros.push({ name: this.newHero }); 
+        this.dcHeros.unshift({ name: this.newHero }); 
         this.newHero = "";
       }
     },
