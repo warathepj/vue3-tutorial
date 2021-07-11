@@ -26,7 +26,12 @@ export default {
   data() {
     return {
       newHero: "",
-      dcHeros: [{ name: "SuperGirl" }, { name: "Flash" }, { name: "Batman" }],
+      dcHeros: [
+        { name: "SuperGirl" },
+        { name: "Flash" }, 
+        { name: "Batman" },
+        ],
+        herosCount: dcHeros.length,
     };
   },
 };
