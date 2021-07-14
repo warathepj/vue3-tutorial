@@ -21,9 +21,9 @@ export default {
     herosCount () {
       return this.dcHeros.length + 'heros';
     },
-    randC() {
-      return Math.random();
-    },
+    // randC() {
+    //   return Math.random();
+    // },
   },
   methods: {
     addHero() {
@@ -40,6 +40,8 @@ export default {
   data() {
     return {
       newHero: "",
+      fname: "Jiant",
+      lname: "Jamsri",
       dcHeros: [
         { name: "SuperGirl" },
         { name: "Flash" }, 
