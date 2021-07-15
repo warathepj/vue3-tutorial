@@ -1,5 +1,6 @@
 <template>
   <h1>Dc Heros {{ herosCount }}</h1>
+  <h2>{{ fullname }}</h2>
   <p>{{ randC }}</p>
   <p>{{ randM() }}</p>
   <ul>
@@ -24,6 +25,11 @@ export default {
     // randC() {
     //   return Math.random();
     // },
+    fullname: {
+      get() {
+        return `${this.fname} ${this.lname}`
+      },
+    },
   },
   methods: {
     addHero() {
@@ -40,7 +46,7 @@ export default {
   data() {
     return {
       newHero: "",
-      fname: "Jiant",
+      fname: "Miki",
       lname: "Jamsri",
       dcHeros: [
         { name: "SuperGirl" },
