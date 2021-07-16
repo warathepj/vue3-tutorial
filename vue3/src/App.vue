@@ -27,7 +27,7 @@ export default {
     // },
     fullname: {
       get() {
-        return `${this.fname} ${this.lname}`
+        return `Full name is ${this.fname} ${this.lname}`
       },
     },
   },
