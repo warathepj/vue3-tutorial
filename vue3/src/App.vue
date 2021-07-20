@@ -13,6 +13,7 @@
     <input v-model="newHero" placeholder="Type Hero Name Here"/>
     <button type="submit">Add Hero</button>
   </form>
+  <button @click="setFullName">Set FULL Name</button>
   <small>Total Heros in the list is {{ herosCount }}</small>
 </template>
 
@@ -25,11 +26,12 @@ export default {
     // randC() {
     //   return Math.random();
     // },
-    fullname: {
-      get() {
-        return `Full name is ${this.fname} ${this.lname}`
+    fullname() {
+        return `Full name is ${this.fname} ${this.lname}`;
       },
-    },
+      // set(fullname) {
+      //   alert(fullname);
+      // },
   },
   methods: {
     addHero() {
@@ -40,6 +42,9 @@ export default {
     },
     randM() {
       return Math.random();
+    },
+    setFullName() {
+      this.fullname = "Jigchow";
     },
   },
 
