@@ -1,6 +1,7 @@
 <template>
   <h1>Dc Heros {{ herosCount }}</h1>
   <h2>{{ fullname }}</h2>
+  <h2>{{ fname }} {{ lname }}</h2>
   <p>{{ randC }}</p>
   <p>{{ randM() }}</p>
   <ul>
@@ -26,12 +27,16 @@ export default {
     // randC() {
     //   return Math.random();
     // },
-    fullname() {
-        return `Full name is ${this.fname} ${this.lname}`;
-      },
-      // set(fullname) {
-      //   alert(fullname);
-      // },
+    // fullname: {
+    //   get() {
+    //     return `Full name is ${this.fname} ${this.lname}`;
+    //   },
+    //   set(fullname) {
+    //     const values = fullname.split(' ');
+    //     this.fname = values[0];
+    //     this.lname = values[1];
+    //   },
+    }
   },
   methods: {
     addHero() {
