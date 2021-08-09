@@ -1,44 +1,20 @@
 <template>
   <AppHeader />
   <div class="w-full flex">
-    
+    <!-- <DcHeros /> -->
+    <Calendar />
   </div>
 </template>
 
 <script>
 import AppHeader from './components/AppHeader';
+import Calendar from './components/Calendar';
+// import DcHeros from './components/DcHeros';
 export default {
-  components: { AppHeader },
-  computed: {
-    herosCount () {
-      return this.dcHeros.length + 'heros';
-    },
-   
-  },
-  methods: {
-    addHero() {
-      if (this.newHero !== "") {
-        this.dcHeros.unshift({ name: this.newHero }); 
-        this.newHero = "";
-      }
-    },
-    remove(index) {
-      this.dcHeros = this.dcHeros.filter((hero, i) => i != index);
-    },
-  },
+  components: { AppHeader, Calendar },
+ 
 
-  data() {
-    return {
-      newHero: "",
-      
-      dcHeros: [
-        { name: "SuperGirl" },
-        { name: "Flash" }, 
-        { name: "Batman" },
-        ],
-        
-    };
-  },
+  
 };
 </script>
 

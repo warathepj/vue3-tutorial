@@ -32,7 +32,35 @@
 </template>
 <script>
 export default {
-    
+  data() {
+    return {
+      newHero: "",
+      
+      dcHeros: [
+        { name: "SuperGirl" },
+        { name: "Flash" }, 
+        { name: "Batman" },
+        ],
+        
+    };
+  },
+   computed: {
+    herosCount () {
+      return this.dcHeros.length + 'heros';
+    },
+   
+  },
+  methods: {
+    addHero() {
+      if (this.newHero !== "") {
+        this.dcHeros.unshift({ name: this.newHero }); 
+        this.newHero = "";
+      }
+    },
+    remove(index) {
+      this.dcHeros = this.dcHeros.filter((hero, i) => i != index);
+    },
+  },    
 }
 </script>
 <style lang="">
